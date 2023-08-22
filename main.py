@@ -51,13 +51,13 @@ def post_car():
 
 
 @app.patch("/cars/<int:id>")
-def update_car():
+def update_car(id):
     REQUESTS.labels("/cars", "patch").inc()
     return "Updating car"
 
 
 @app.delete("/cars/<int:id>")
-def delete_car():
+def delete_car(id):
     REQUESTS.labels("/cars", "delete").inc()
     return "Deleting car"
 
